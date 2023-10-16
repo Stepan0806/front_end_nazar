@@ -94,6 +94,9 @@ p.ex10 {
     letter-spacing: 2em;
     text-transform: lowercase;
 }
+.screenshot{
+    margin-top: 20px;
+}
 
 /* Реалізувати будь-які вісім різновидів селекторів із пункту РІЗНОВИДИ СЕЛЕКТОРІВ. */
 * {
