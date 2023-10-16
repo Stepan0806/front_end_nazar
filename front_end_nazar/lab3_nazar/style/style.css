@@ -1,0 +1,159 @@
+body {
+    background-color: #79e2f5;
+}
+
+a {
+    color: blue;
+}
+
+a.list1 {
+    color: #FFBB00;
+}
+
+a.list2 {
+    color: #800000;
+}
+
+#exam10 {
+    color: #56c500;
+}
+
+p.ex4 {
+    color: #00ff00;
+}
+
+p.ex5 {
+    color: #00ff00;
+    background-color: #ff0000;
+}
+
+body.body5 {
+    background: url("../image/ball.jpg") no-repeat fixed 5cm 5cm;
+}
+
+p.ex6,
+h1.ex7,
+p.ex8,
+p.ex9,
+h1.ex10 {
+    font-family: Arial, Candara, Century-Gothic, sans-serif;
+}
+
+h1.ex7 {
+    font-style: normal;
+}
+
+h2.ex7 {
+    font-family: Times New Roman, Georgia, serif;
+    font-style: italic;
+}
+
+p.ex7 {
+    font-family: Times New Roman, Georgia, serif;
+    font-style: oblique;
+}
+
+p.ex8 {
+    font-style: normal;
+    font-variant: small-caps;
+}
+
+p.ex9 {
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+}
+
+h1.ex10 {
+    font-style: normal;
+    font-size: 30px;
+    text-transform: none;
+}
+
+h2.ex10,
+h3.ex10 {
+    font-family: Times New Roman, Georgia, serif;
+    font-style: italic;
+}
+
+h2.ex10 {
+    font-size: 100pt;
+    text-transform: capitalize;
+}
+
+h3.ex10 {
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+p.ex10 {
+    font: italic bold 30px arial, sans-serif;
+    text-indent: 3pt;
+    text-align: justify;
+    text-decoration: line-through;
+    letter-spacing: 2em;
+    text-transform: lowercase;
+}
+
+/* Реалізувати будь-які вісім різновидів селекторів із пункту РІЗНОВИДИ СЕЛЕКТОРІВ. */
+* {
+    padding: 0;
+}
+li a {
+    text-decoration: none;
+}
+
+ul+p {
+    color: red;
+}
+
+body>.main-caption {
+    text-shadow: 0 0 5px red;
+}
+
+ul~p {
+    font-weight: 900;
+}
+
+a[href="../lab3.html"] {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+a[href="../lab3.html"]:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+a[href="../lab3.html"]:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
