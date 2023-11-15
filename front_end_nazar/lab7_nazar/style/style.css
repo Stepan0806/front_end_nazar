@@ -1,0 +1,291 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+}
+
+aside {
+    width: 20%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    text-align: center;
+    cursor: wait;
+    caret-color: red;
+}
+
+aside span {
+    /* rotate */
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+
+#back {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    font: 2em 'Roboto', sans-serif;
+    color: white;
+    cursor: pointer;
+    background: radial-gradient(circle at 50%, red, blue);
+}
+
+#back:hover {
+    background-color: #7a3;
+    transform: translateY(-5px) skewY(5deg);
+    transform-origin: top left;
+}
+
+#back:active {
+    background-color: #8cd825;
+}
+
+#back::before {
+    content: url("https://cdn-icons-png.flaticon.com/32/0/340.png");
+
+}
+
+header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 0px 30px;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8cd825;
+    z-index: 100000;
+}
+
+.logo {
+    display: block;
+    transition: transform 10s;
+}
+
+.logo:hover{
+    transform:matrix3d(
+        -0.6,       1.34788, 0,        0,
+        -2.34788,  -0.6,     0,        0,
+         0,         0,       1,        0,
+         0,         0,      10,        1) scale3d(1.5,1.5,1.5);
+}
+
+.logo h1 {
+    font: 3em 'Roboto', sans-serif;
+}
+
+.logo p {
+    font: 1.2em 'Roboto', sans-serif;
+    padding-left: 5px;
+}
+
+.white {
+    color: white;
+}
+
+.underline {
+    text-decoration: underline wavy 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    font: 1.1em 'Roboto', sans-serif;
+}
+
+nav li {
+    margin: 0px 10px;
+}
+
+nav a {
+    transition: all 0.5s ease-in-out 0.2s;
+}
+
+nav a:hover {
+    color: white !important;
+    border-bottom: 3px solid white;
+}
+
+nav li:before {
+    content: '🧭';
+}
+
+main {
+    margin-top: 8%;
+}
+
+section {
+    min-height: 600px;
+    padding-top: 10% !important;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+article {
+    width: 30%;
+    height: 450px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#about-us {
+    padding: 70px 150px;
+    font: 2em 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 2em;
+    background-color: #7a3;
+}
+
+#food,
+#blog {
+    background-color: #f1f1f1;
+    outline: 10px dotted #8cd825;
+}
+
+figcaption {
+    font: 1.2em 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 2em;
+    text-align: center;
+    text-shadow: 5px 5px 10px #000;
+}
+
+hgroup {
+    text-align: left;
+    padding-left: 16px;
+    border-left: 10px solid #00c8d7;
+    margin: 10px 0px;
+}
+
+hgroup h2 {
+    font: 1em 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+hgroup h3 {
+    font: 0.8em 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 5px 0px;
+}
+
+article p {
+    overflow: hidden;
+    height: 105px;
+    resize: vertical;
+}
+
+article p::before {
+    content: open-quote;
+}
+
+article p::after {
+    content: close-quote;
+}
+
+.readmore {
+    display: block;
+    margin: 10px 0px;
+    padding: 5px;
+    background-image: linear-gradient(to right bottom, red, blue);
+    border-radius: 5px;
+}
+
+.readmore,
+.readmore span {
+    transition-property: padding;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 250ms;
+}
+
+.readmore:hover {
+    padding: 0px;
+}
+
+.readmore:hover span {
+    padding: 15px 0px;
+}
+
+.readmore span {
+    display: block;
+    margin: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: linear-gradient(rgba(0, 200, 215, 1), #fff 130%);
+    color: white;
+    font: 1em 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer li a::after {
+    content: attr(href);
+    padding-left: 10px;
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    top: -22px;
+    left: 50px;
+}
+
+footer li {
+    text-align: center;
+    display: block;
+    width: 10px;
+    height: 20px;
+}
+
+footer {
+    margin-top: 10%;
+    background-color: #4e4e4e;
+    height: 150px;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font: 0.7em 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 2em;
+    border-image-width: 20px;
+    border-image-source: url("../img/border-diamonds.png");
+    border-image-slice: 44;
+    border-image-repeat: repeat;
+    border-image-outset: 0px;
+}
+
+footer div:first-child {
+    width: 30%;
+}
+
+address a,
+footer li a {
+    color: white;
+}
