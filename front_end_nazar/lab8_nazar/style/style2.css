@@ -1,0 +1,161 @@
+html,
+body,
+main,
+p,
+section {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header,
+aside,
+footer,
+p,
+section,
+nav {
+    overflow: auto;
+}
+
+aside {
+    background-color: blue;
+}
+
+header,
+footer {
+    background-color: yellow;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    background-color: white;
+}
+
+p {
+    background-color: red;
+}
+
+section:last-child {
+    background-color: blue;
+    grid-area: section2;
+}
+
+section:first-child {
+    grid-area: section1;
+}
+
+.bottom {
+    background-color: red;
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 15vh 70vh 15vh;
+}
+
+.content {
+    margin: 3%;
+    margin-bottom: 5%;
+    height: 100%;
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "p p"
+        "section1 section2"
+        "bottom section2";
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 15% 45% 15%;
+    grid-gap: 6%;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        height: initial;
+    }
+
+    .content {
+        margin: 0;
+        grid-template-areas:
+            "p"
+            "section1"
+            "bottom"
+            "section2";
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 40% 10% 38%;
+        grid-gap: 1%;
+    }
+
+    html,
+    body {
+        height: initial;
+    }
+}
+
+@media print{
+    body {
+        height: initial;
+        grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 15vh 15vh 70vh 15vh;
+    }
+
+    .content {
+        margin: 0;
+        grid-template-areas:
+            "p"
+            "section1"
+            "bottom"
+            "section2";
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 40% 10% 38%;
+        grid-gap: 1%;
+    }
+
+    html,
+    body {
+        height: initial;
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+p {
+    grid-area: p;
+}
+
+.bottom {
+    grid-area: bottom;
+}
