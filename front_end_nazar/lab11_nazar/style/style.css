@@ -1,0 +1,68 @@
+form * {
+    display: block;
+    margin: 10px;
+}
+
+p {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.after::after {
+    content: "це елемент ::after";
+    color: red;
+}
+
+.before::before {
+    content: "це елемент ::before";
+    color: red;
+}
+
+.first-letter::first-letter {
+    color: red;
+}
+
+.first-line::first-line {
+    color: red;
+    display: block;
+    width: 20px;
+}
+
+a:link {
+    color: #FF0000;
+}
+
+a:visited {
+    color: #00FF00;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+
+input:valid:not([type=submit]),
+textarea:valid {
+    background-color: green;
+}
+
+input:invalid ,
+textarea:invalid{
+    background-color: red;
+}
+
+p:empty {
+    background-color: red;
+}
+
+ul li:nth-last-child(2) {
+    background-color: red;
+}
+
+:root{
+    background-color: silver;
+}
